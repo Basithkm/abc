@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+
+{% comment %} {% block tittle %}
+Pricing
+{% endblock  %} {% endcomment %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f1{
+            width: 100%;
+            height: 1500px;
+            background-color: black;
+        }
+        .price{
+            width: 33.3%;
+        }
+        .plan{
+            width: 33.3%;
+            height: 600px;
+            background-color: #282828;
+            position: absolute;
+            top: 145px;
+            margin-left: 33.3%;
+        }
+        .premium{
+            width: 33.3%;
+            height: 600px;
+            position: absolute;
+            margin-left: 66.6%;
+            top: 145px;
+        }
+        .btn{
+            background-color: red;
+            color: white;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            font-size: large;
+            position: absolute;
+            margin-left: -33px;
+            margin-top: 98px;
+            border-radius: 20px;
+        }
+        .join{
+            width: 100%;
+            height: 20px;
+            position: absolute;
+            bottom: -131px;
+        }
+        .join img{
+            width: 98%;
+            height: 400px;
+        }
+        .disc{
+            position: absolute;
+            top: 918px;
+            margin-left: 490px;
+        }
+        .disc button{
+            background-color: red;
+            color: white;
+            width: 200px;
+            height: 50px;
+            margin-left: 100px;
+            border-radius: 15px;
+        }
+        #nnn{
+            margin-left: 70px;
+        }
+        #nnn{
+            text-decoration: none;
+            color: white;
+            padding-right: 5px;
+        }
+
+
+
+
+
+
+
+
+        .main{
+            width: 100%;
+            height: 100%;
+            background-color: red;
+        }
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin-top: 100px;
+            background-color: black;
+        
+        }
+        .cards div{
+            position: relative;
+            width: 240px;
+            height: 380px;
+            border: 1px solid lightgray;
+            margin: 10px;
+            text-align: center;
+            background: red;
+            padding: 7px;
+        
+        }
+        .cards div:hover{
+            box-shadow: 0 0 10px 0 #fff;
+        }
+        .cards div img{
+            width: 240px;
+            height: 200px;
+        }
+        .cards div p{
+            color: dodgerblue;
+            font-family: sans-serif;
+            font-size: 17px;
+            font-variant: small-caps;
+        }
+        .cards div h1{
+            color: #333333;
+            font-size: 17px;
+            font-family: sans-serif;
+            width: 100%;
+            height: auto;
+        }
+        .cards div h3{
+            color: white;
+        }
+        .cards div button{
+            position: relative;
+            top: 10px;
+            width: 120px;
+            padding: 20px;
+            background: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+        }
+        .cards div button i{
+            color: #fff;
+            padding-right: 5px;
+        }
+        .cards div button:hover{
+            background: black;
+            color: white;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+            
+        }
+        li{
+            padding-top: 50px;
+            color: orange;
+        }
+        .fa{
+            font-size: 26px;
+            transition: .4s;
+            margin: 3px;
+        }
+        .fa:hover{
+            transform: scale(1.3);
+            transition: .6s;
+        }
+        #lll{
+            text-decoration: none;
+            color: red;
+        }
+      
+    </style>
+</head>
+<body>
+    <hr style="color: #808080;">
+    <!-- <div class="f1">
+        <div class="price">
+            <h3 style="color: red;">Pricing plan</h3>
+            <h1 style="color:white">Affordable pricing plan For your</h1>
+            <h4 style="color:white">Lorem lopsum dolor sit amet constecute adpsiting alite simple and perfect<br>Lorem lopsum dolor sit amet constecute adpsiting alite simple and perfec</h4>
+            <ul>
+            <i class="fa-solid fa-square-check" style="color: red;">Cardio Excersice</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">weight lifting</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Diet plans</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Overall results</i><br>
+            <button class="btn"><a href="{% url 'blog' %}" id="nnn">Read More</a></button>
+        </ul>
+        </div>
+        <div class="plan">
+            <div id="nnn">
+            <h3 style="color: white;">Basic plan</h3>
+            <h1 style="color:red ;">$30/mo</h1>
+            <ul>
+            <i class="fa-solid fa-square-check" style="color: red;">Personal training</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Cardio Excersice</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">weight lifting</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Diet plans</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Overall results</i><br>
+        </ul>
+            <button class="btn"><a href="{% url 'blog' %}"id="nnn">Read More</a></button>
+        </div>
+            
+        </ul>
+        </div>
+        <div class="premium">
+            <h3 style="color: white;text-align:center;">Premium plan</h3>
+            <h1 style="color:red ;">$30/mo</h1>
+            <ul>
+            <i class="fa-solid fa-square-check" style="color: red;">Personal training</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Cardio Excersice</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">weight lifting</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Diet plans</i><br>
+            <i class="fa-solid fa-square-check" style="color: red;">Overall results</i><br>
+            <button class="btn"><a href="{% url 'blog' %}"id="nnn">Read More</a></button>
+            
+        </ul>
+        </div>
+        <div class="join">
+            <img src="https://images.unsplash.com/photo-1546817372-628669db4655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="">
+        </div>
+        <div class="disc">
+            <h1 style="color: red;text-align:center;">Join us Now</h1>
+            <h1 style="color: white;">GET UP TO 50% DISCOUNT</h1>
+            <h4 style="color: white;">this new year offer refer a friend get uo to 50% discount ur 1 month fees</h4>
+            <button>Get Discount</button>
+        </div>
+
+    </div> -->
+
+
+
+
+
+<div class="main">
+    <div class="cards">
+        <div class="fs">
+            <img src="https://content.jdmagicbox.com/comp/malappuram/u5/9999px483.x483.180330155221.h4u5/catalogue/health-life-ladies-fitness-centre-tirur-malappuram-fitness-centres-jaf0yeqqzh.jpg" alt="">
+            <h1>Burn calories and food plans with protien</h1>
+            <h3>1500 INR</h3>
+            <ul>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+            </ul>
+            <button><a href="{% url 'blog' %}" id="lll">JOIN NOW</a></button>
+        </div>
+        <div>
+            <img src="https://content.jdmagicbox.com/comp/malappuram/n8/9999px483.x483.180222222001.y3n8/catalogue/health-life-ladies-fitness-centre-tirur-malappuram-gyms-f6qmf46wqu.jpg" alt="">
+            <h1>1 Personal trainer with you in full time</h1>
+            <h3>3500 INR</h3>
+            <ul>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+            </ul>
+            <button><a href="{% url 'blog' %}" id="lll">JOIN NOW</a></button>
+        </div>
+        <div>
+            <img src="https://content.jdmagicbox.com/comp/malappuram/n8/9999px483.x483.180222222001.y3n8/catalogue/health-life-ladies-fitness-centre-tirur-malappuram-gyms-tr3isw6vmp.jpg" alt="">
+            <h1>JOIN US WE WILL PROVE AGE IS JUST NUMBER</h1>
+            <h3>1500 INR</h3>
+            <ul>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+            </ul>
+            <button><a href="{% url 'blog' %}" id="lll">JOIN NOW</a></button>
+        </div>
+        <div>
+            <img src="https://content.jdmagicbox.com/comp/malappuram/n8/9999px483.x483.180222222001.y3n8/catalogue/health-life-ladies-fitness-centre-tirur-malappuram-gyms-lwwmukc97h.jpg" alt="">
+            <h1>3 months Advanced workout scheme Protiens included</h1>
+            <h3>1500 INR</h3>
+            <ul>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star checked"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+            </ul>
+            <button><a href="{% url 'blog' %}" id="lll">JOIN NOW</a></button>
+        </div>
+    </div>
+   
+</div>
+</body>
+</html>
+
+{% endblock  %}

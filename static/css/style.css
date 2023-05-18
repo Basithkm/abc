@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li:hover{
+    background-color: red;
+    color: black;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.card-img-top{
+    height: 300px;
+    width: 300px;
+    padding-left: 20px;
+    
+}
+.card{
+    position: absolute;
+    left: 300px;
+}
+.fff{
+    background-color: red;
+}
+.fd{
+    text-align: center;
+}
+.container{
+    width: 800px;
+    height: 600px;
+    background-color: red;
+    margin-left: 50px;
+}
+.imge{
+    width: 100%;
+    height: 700px;
+}
+.card-img-top{
+    display: inline-flex;
+    width: 1000px;
+    
+}

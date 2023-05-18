@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block tittle %}
+About
+{% endblock  %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .about{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+    .about img{
+      width: 50%;
+      height: 600px;
+    }
+    .ck{
+      position: absolute;
+      bottom: 270px;
+      margin-left: 800px;
+    }
+  </style>
+</head>
+<body>
+  <hr style="color: #808080;">
+  <div class="about">
+    <img src="https://c1.wallpaperflare.com/preview/828/253/109/barbell-exercise-fitness-man-indoor-poster.jpg" alt="">
+</div>
+<div class="ck">
+  <h1 style="color: red;">About us</h1>
+  <h1 style="color: white;">Every Day Is A Chance To<br>Become Better</h1>
+  <h3 style="color: white;">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities. Adults who sit less and do any amount of moderate-to-vigorous physical activity gain some health benefits.</h3>
+  <li style="color: white;">Body and Mind</li>
+  <li style="color: white;">Strategies</li>
+  <li style="color: white;">Helthy Life</li>
+  <li style="color: white;">Workouts</li>
+  
+</div>
+</body>
+</html>
+{% endblock  %}

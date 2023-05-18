@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+trainers
+
+{% endblock title %}
+{% block  content %}
+ {% comment %} <h1 style="text-align:center"> <u>  Trainers Page</u> </h1> {% endcomment %}
+ {% for t in tri  %}
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <style>
+  .imge{
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    display: inline-block;
+    color: white;
+    text-align: center;
+  }
+  .card-img-top{
+    width: 500px;
+  }
+  .name{
+    color: red;
+  }
+
+ </style>
+ <body>
+  <hr style="color: #808080;">
+  <div class="imge">
+    <img class="card-img-top" src="{{t.traine_image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h1 class="card-title">{{t.traine_name}}</h1>
+      <h2 class="name">{{t.traine_spec}}</h2>
+      <h3>Effective personal trainer with over 10 years of experience helping clients achieve their health goals. Seeking to join a team of seasoned trainers at In-Shape to encourage, motivate, and shift perspectives on fitness, health, and wellness.</h3>
+      
+      
+    </div>
+  </div>
+ </body>
+ </html>
+  {% endfor %}
+  {% endblock %}
+  {% load static %}

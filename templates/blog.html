@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block tittle %}
+Blog
+{% endblock  %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: black;
+        color: red;
+        margin-left: 50%;
+        width: 50%;
+        height: 600px;
+        position: absolute;
+        top: 102px;
+       
+
+    }
+    .container form{
+       font-size: 30px;
+       padding: 5px 10px 5px;
+       
+    }
+    .container form{
+        text-align: center;
+        
+    }
+    .container button{
+        width: 120px;
+        height: 50px;
+        color: #fff;
+        background-color: red;
+        margin-left: 100px;
+    }
+    .dr img{
+        width: 50%;
+        height: 600px;
+    }
+    
+
+</style>
+<body>
+    <hr style="color: #808080;">
+    <div class="dr">
+        <img src="https://content.jdmagicbox.com/comp/malappuram/n8/9999px483.x483.180222222001.y3n8/catalogue/health-life-ladies-fitness-centre-tirur-malappuram-gyms-tfo2h6v1qd.jpg" alt="">
+    </div>
+    
+       
+
+    
+
+    <div class="container">
+    
+        <form action="" class="raw" id="all" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}<br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
+
+
+{% endblock  %}
